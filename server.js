@@ -21,7 +21,7 @@ app.get('/article-one',function(req,res) {
     res.send('Article One');
 });
 
-app.get('artile-two',function(req,res){
+app.get('article-two',function(req,res){
     res.send('Article Two');
     
 });
