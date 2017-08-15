@@ -4,5 +4,5 @@ ele.innerHTML = "Happy Learning!!!!!";
 
 var img = document.getElementById('img');
 img.onClick = function(){
-    img.style.marginleft ='100px';
-}
+    img.style.marginLeft ='100px';
+};
