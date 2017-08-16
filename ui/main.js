@@ -15,7 +15,7 @@ console.log('Loaded!');
 
 var button = document.getElementById('counter');
 var counter = 0;
-
+ console.log('before click');
 button.onClick = function(){
     counter = counter+ 1;
     console.log(counter);
@@ -23,3 +23,4 @@ button.onClick = function(){
     span.innerHTML = counter.toString();
     
 };
+ console.log('after click');
