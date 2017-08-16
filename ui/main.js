@@ -13,12 +13,12 @@ img.onClick = function(){
    var interval = setInterval(moveRight,100); 
 };
 
-var button = document.getElementById("counter");
+var button = document.getElementById('counter');
 var counter = 0;
 
 button.onClick = function(){
-    counter +=1;
-    var span =  document.getElementById("count");
+    counter += 1;
+    var span =  document.getElementById('count');
     span.innerHTML = counter.toString();
     
 }
