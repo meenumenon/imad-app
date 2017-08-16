@@ -67,4 +67,5 @@ button.onclick = function(){
 //Code for the input name box
 
 var nameInput = document.getElementById('name');
-console.log(nameInput);
+var name = nameInput.value;
+console.log(name);
