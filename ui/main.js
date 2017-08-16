@@ -62,3 +62,9 @@ button.onclick = function(){
 };
 
 //Code for button counter - Ends here
+
+
+//Code for the input name box
+
+var nameInput = document.getElementById('name');
+console.log(nameInput);
