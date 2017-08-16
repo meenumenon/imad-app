@@ -3,7 +3,7 @@ console.log('Loaded!');
 //ele.innerHTML = "Happy Learning!!!!!";
 
 //Code for moving image - Starts here 
-
+/*
 var img = document.getElementById('img');
 var marginLeft = 0;
 
@@ -16,6 +16,8 @@ img.onclick = function(){
 };
 
 //Code for moving image - Ends here 
+
+*/
 
 //Code for button counter - Starts here
 
