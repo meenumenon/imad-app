@@ -68,4 +68,19 @@ button.onclick = function(){
 
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
-console.log(name);
+
+var submit = documnt.getElementById('submit_btn');
+submit.onclick = function(){
+     var names = ['Meenu','Ravi','Anirudh','Govind'];
+     var list = '';
+     
+     //This will convert the names into HTML element and add it to variable list.
+     for (var i =0;i<names.length;i++)
+     {
+         list +='<li>' +names[i]+ '</li>';
+     }
+     
+     var ul = document.getElementById('namelist');
+     ul.innerHTML = list;
+    
+};
