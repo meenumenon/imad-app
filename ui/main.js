@@ -69,7 +69,7 @@ button.onclick = function(){
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
 
-var submit = documnt.getElementById('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
      var names = ['Meenu','Ravi','Anirudh','Govind'];
      var list = '';
