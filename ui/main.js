@@ -22,13 +22,42 @@ img.onclick = function(){
 //Code for button counter - Starts here
 
 var button = document.getElementById('counter');
-var counter = 0;
+//var counter = 0;
 
 button.onclick = function(){
-    counter = counter+ 1;
-    console.log(counter);
-    var span =  document.getElementById('count');
-    span.innerHTML = counter.toString();
+    
+    //Create a request object
+    var request = new XMLHttpRequest();
+    
+    //Capture request and store it in a variable
+        request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            
+            if(request.status === 200){
+                
+               //Take the response in counter variable    
+               var counter= request.responseText;
+                var span =  document.getElementById('count');
+                
+                //Put the counter variable inside span
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
+    
+    //Make the request
+    
+    request.open('GET','http://meenumenonr.imad.hasura-app.io/counter',true);
+    request.send(null);
+    
+    
+    
+    //Render variable in correct span
+    
+   // counter = counter+ 1;
+   // console.log(counter);
+   // var span =  document.getElementById('count');
+    //span.innerHTML = counter.toString();
     
 };
 
