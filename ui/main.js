@@ -86,6 +86,7 @@ submit.onclick = function(){
                 if(request.status === 200){
                 
                  var names = req.resposeText;
+                 names = JSON.parse(names);
                  var list = '';
      
      //This will convert the names into HTML element and add it to variable list.
