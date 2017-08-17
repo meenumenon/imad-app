@@ -47,7 +47,8 @@ button.onclick = function(){
     
     //Make the request
     
-    request.open('GET','http://meenumenonr.imad.hasura-app.io/counter',true);
+   request.open('GET','http://meenumenonr.imad.hasura-app.io/counter',true);
+    
     request.send(null);
     
     
@@ -70,9 +71,22 @@ var nameInput = document.getElementById('name');
 var name = nameInput.value;
 
 var submit = document.getElementById('submit_btn');
+
+//When submit button is clicked
+
 submit.onclick = function(){
-     var names = ['Meenu','Ravi','Anirudh','Govind'];
-     var list = '';
+
+       //Create a request object
+         var request = new XMLHttpRequest();
+    
+       //Capture request and store it in a variable
+         request.onreadystatechange = function(){
+           if(request.readyState === XMLHttpRequest.DONE){
+            
+                if(request.status === 200){
+                
+                 var names = req.resposeText;
+                 var list = '';
      
      //This will convert the names into HTML element and add it to variable list.
      for (var i =0;i<names.length;i++)
@@ -82,5 +96,12 @@ submit.onclick = function(){
      
      var ul = document.getElementById('namelist');
      ul.innerHTML = list;
+     
+      }
+     }
+    };
+    
+    request.open('GET','http://meenumenonr.imad.hasura-app.io/counter',true);
+    request.send(null);
     
 };
