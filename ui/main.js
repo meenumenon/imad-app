@@ -103,8 +103,10 @@ submit.onclick = function(){
       }
      }
     };
-    
+    if(name != '')
+    {
     request.open('GET','http://meenumenonr.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
+    }
     
 };
