@@ -67,14 +67,16 @@ button.onclick = function(){
 
 //Code for the input name box
 
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 
 var submit = document.getElementById('submit_btn');
 
 //When submit button is clicked
 
 submit.onclick = function(){
+    
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
 
        //Create a request object
          var request = new XMLHttpRequest();
